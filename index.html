@@ -4,26 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var form = document.querySelector('form');
-        form.onsubmit = function(e) {
-            e.preventDefault(); 
-
-            
-            var data = new FormData(form);
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                mode: 'no-cors' 
-            }).then(response => {
-                console.log('Form submitted successfully');
-                
-                alert("Form submitted successfully!");
-            }).catch(error => console.error('Error:', error));
-        };
-    });
-    </script>
+    <script src="script.js"></script>
 </head>
 <body>
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSfMD6PVTxnzjTilGEI9XWTjwSdnaHEDhk9E6IvaiWnL21lqoA/formResponse">
